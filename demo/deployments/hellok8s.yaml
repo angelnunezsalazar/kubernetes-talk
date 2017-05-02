@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hellok8s
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hellok8s
+    spec:
+      containers:
+      - name: hellok8s
+        image: gcr.io/angel-nunez/hellok8s:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
