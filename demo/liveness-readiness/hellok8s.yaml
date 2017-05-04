@@ -1,0 +1,32 @@
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hellok8s-liveness
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hellok8s
+    spec:
+      containers:
+      - name: hellok8s
+        image: gcr.io/angel-nunez/hellok8s:liveness
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 15
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 15
+          timeoutSeconds: 1
+          periodSeconds: 15
