@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hellok8s
 spec:
-  replicas: 1
+  replicas: 15
   template:
     metadata:
       labels:
@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: hellok8s
-        image: gcr.io/angel-nunez/hellok8s:1.0
+        image: gcr.io/angel-nunez/hellok8s:2.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
