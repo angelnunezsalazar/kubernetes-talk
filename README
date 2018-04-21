@@ -1,17 +1,15 @@
 # Kubernetes - #devhangout
 
-Slides and code of the 'Kubernetes' talk in the #devhangout event.
+Slides and code used for 'Kubernetes' talks.
 
 
 Cluster
 - Project: angel-nunez
 - Zone: us-central1-a
-- Cluster name: software-craftsmanship
+- Cluster name: ???
 
 NodeJS
 - Port: 8080
 
 Docker
 - Image: gcr.io/angel-nunez/hellok8s:1.0
-
-
