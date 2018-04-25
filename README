@@ -1,15 +1,3 @@
-# Kubernetes - #devhangout
+# Kubernetes 
 
-Slides and code used for 'Kubernetes' talks.
-
-
-Cluster
-- Project: angel-nunez
-- Zone: us-central1-a
-- Cluster name: ???
-
-NodeJS
-- Port: 8080
-
-Docker
-- Image: gcr.io/angel-nunez/hellok8s:1.0
+Slides and code used in Kubernetes presentations.
